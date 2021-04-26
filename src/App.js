@@ -5,6 +5,7 @@ import Genre from './Pages/Genre'
 import MovieDetails from './Pages/MovieDetails'
 import Upcoming from './Pages/Upcoming'
 import Top from './Pages/Top'
+import New from './Pages/New'
 import Nav from './Components/nav'
 
 function App() {
@@ -14,21 +15,15 @@ function App() {
       <div className="App">
         <Nav />
         <Switch>
-          <Route path='/' exact>
-            <Home />
-          </Route>
-          <Route path='/genre'>
-            <Genre />
-          </Route>
-          <Route path='/moviedetails'>
-            <MovieDetails />
-          </Route>
-          <Route path='/upcoming'>
-            <Upcoming />
-          </Route>
-          <Route path='/top'>
-            <Top />
-          </Route>
+
+          <Route path='/' component={Home} exact />
+          <Route path='/genres' component={Genre} />
+          <Route path='/details' component={MovieDetails} />
+          <Route path='/upcoming' component={Upcoming} />
+          <Route path='/top' component={Top} />
+          <Route path='/new' component={New} />
+
+
         </Switch>
 
 
