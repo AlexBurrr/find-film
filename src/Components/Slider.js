@@ -7,7 +7,7 @@ import '../scss/slider.scss'
 
 const upcoming = 'https://api.themoviedb.org/3/movie/upcoming?api_key=21ac8eec01fc0e49780c1a2d65e30dc1&language=en-US&page=1'
 
-
+let iconStyles = { color: '#fff' }
 
 
 const Slider = () => {
@@ -38,6 +38,7 @@ const Slider = () => {
         if (click === 0) {
             setClick(19)
         }
+
 
     }
 
@@ -72,7 +73,7 @@ const Slider = () => {
                 <p className='movie-overview'>{movieDetails.overview}</p>
                 <div className="icons">
                     <div className="previous"><GrFormPrevious onClick={decrease} /></div>
-                    <div className="next"><GrFormNext onClick={increase} /></div>
+                    <div className="next"><GrFormNext style={iconStyles} onClick={increase} /></div>
                 </div>
 
             </div>
