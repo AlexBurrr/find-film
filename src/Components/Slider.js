@@ -12,11 +12,22 @@ const upcoming = 'https://api.themoviedb.org/3/movie/upcoming?api_key=21ac8eec01
 
 const Slider = () => {
     const [backdropPath, setBackdropPath] = useState('')
-    const [click, setClick] = useState(0)
+    const [click, setClick] = useState(0);
+    const [movieDetails, setMovieDetails] = useState([]);
+
+    const reset = () => {
+        if (click === 19) {
+            setClick(0)
+        }
+    }
 
     const increase = () => {
         if (click < 19) {
             setClick(click + 1)
+        }
+
+        if (click === 19) {
+            setClick(0)
         }
 
     }
@@ -24,36 +35,44 @@ const Slider = () => {
         if (click > 0) {
             setClick(click - 1)
         }
+        if (click === 0) {
+            setClick(19)
+        }
 
     }
-
 
     useEffect(() => {
         axios.get(upcoming)
             .then(res => {
-                let i;
-                // for (i = 0; i < res.data.results.length; i++) {
-                console.log(res.data.results);
-                setBackdropPath(res.data.results[click].backdrop_path)
-                // }
-            }, [])
-    })
-    let poster = `https://image.tmdb.org/t/p/w500/${backdropPath}`
 
+                console.log(res);
+                setBackdropPath(res.data.results[click].backdrop_path);
+
+                setMovieDetails({
+                    'title': res.data.results[click].title,
+                    'overview': res.data.results[click].overview
+
+
+                });
+
+            })
+    }, [click])
+    console.log(movieDetails);
+
+
+    let poster = `https://image.tmdb.org/t/p/w500/${backdropPath}`
 
     // https://image.tmdb.org/t/p/3000/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg
 
     return (
         <div className='slider-container'>
-            <h1 className="upcoming-title"></h1>
             <div className="slider-content">
+                <h1 className="title">{movieDetails.title}</h1>
                 <img src={poster} alt='wtf' className='image' />
+                <p className='movie-overview'>{movieDetails.overview}</p>
                 <div className="icons">
                     <div className="previous"><GrFormPrevious onClick={decrease} /></div>
                     <div className="next"><GrFormNext onClick={increase} /></div>
-
-
-
                 </div>
 
             </div>
