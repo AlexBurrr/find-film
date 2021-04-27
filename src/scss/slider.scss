@@ -1,0 +1,51 @@
+.slider-container{
+    position: relative;
+    // background-color: red;
+    height: 45rem;
+}
+
+
+.slider-content{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}
+
+.image{
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.icons{
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 4rem;
+    padding: 3rem;
+    display: flex;
+    height: auto;
+    width: auto;
+
+
+
+
+}
+.previous, .next{
+    color: white;
+    cursor: pointer;
+}
+.previous{
+    color: white;;
+margin: 2rem;
+}
+.next{
+    margin: 2rem;
+    }
+

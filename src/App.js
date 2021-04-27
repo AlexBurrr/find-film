@@ -6,7 +6,7 @@ import MovieDetails from './Pages/MovieDetails'
 import Upcoming from './Pages/Upcoming'
 import Top from './Pages/Top'
 import New from './Pages/New'
-import Nav from './Components/nav'
+import Nav from './Components/Nav'
 
 function App() {
   return (

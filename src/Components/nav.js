@@ -2,9 +2,9 @@ import React from 'react'
 import '../scss/nav.scss'
 import { Link } from 'react-router-dom'
 
-const nav = () => {
+const Nav = () => {
     return (
-        <div className='container'>
+        <div className='nav-container'>
             <nav>
                 <Link to='/' exact className="logo"> <li>ff</li></Link>
                 <ul className="nav-ul">
@@ -21,4 +21,5 @@ const nav = () => {
     )
 }
 
-export default nav
+
+export default Nav
