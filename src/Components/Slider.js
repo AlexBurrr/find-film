@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
+import { Link } from 'react-router-dom'
 
 import '../scss/slider.scss'
 
@@ -39,8 +40,10 @@ const Slider = () => {
             setClick(19)
         }
 
-
     }
+
+
+
 
     useEffect(() => {
         axios.get(upcoming)
@@ -51,7 +54,8 @@ const Slider = () => {
 
                 setMovieDetails({
                     'title': res.data.results[click].title,
-                    'overview': res.data.results[click].overview
+                    'overview': res.data.results[click].overview,
+                    'movieID': res.data.results[click].id,
 
 
                 });
@@ -68,15 +72,29 @@ const Slider = () => {
     return (
         <div className='slider-container'>
             <div className="slider-content">
-                <h1 className="title">{movieDetails.title}</h1>
-                <img src={poster} alt='wtf' className='image' />
-                <p className='movie-overview'>{movieDetails.overview}</p>
-                <div className="icons">
-                    <div className="previous"><GrFormPrevious onClick={decrease} /></div>
-                    <div className="next"><GrFormNext style={iconStyles} onClick={increase} /></div>
-                </div>
+                <div className="slider-image">
+                    <img src={poster} alt='wtf' className='image' />
 
+                </div>
+                <div className="slider-details">
+                    <h1 className="title">{movieDetails.title}</h1>
+                    <p className='movie-overview'>{movieDetails.overview}</p>
+
+                    <Link className='slider-link' to={{
+                        pathname: '/details',
+                        state: movieDetails,
+                    }}>
+                        <button className='button' type='submit' >see more</button>
+                    </Link>
+                </div>
             </div>
+
+            <div className="icons">
+                <div className="previous"><GrFormPrevious onClick={decrease} /></div>
+                <div className="next"><GrFormNext style={iconStyles} onClick={increase} /></div>
+            </div>
+
+
 
         </div >
     )
