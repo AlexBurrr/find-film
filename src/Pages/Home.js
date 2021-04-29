@@ -1,6 +1,8 @@
 import React from 'react'
-import Slider from '../Components/Slider'
+import Hero from '../Components/Hero'
 import '../scss/home.scss'
+import Popular from '../Components/Popular';
+
 
 
 
@@ -14,7 +16,7 @@ const Home = () => {
 
     return (
         <div className='home-container'>
-            <Slider />
+            <Hero />
         </div>
     )
 }

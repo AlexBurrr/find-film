@@ -2,13 +2,13 @@ import React from 'react'
 
 
 
-const MovieDetails = ({ movieDetails }) => {
-    console.log(movieDetails);
+const MovieDetails = () => {
+
     return (
 
 
         <div>
-            j
+
         </div>
     )
 }
