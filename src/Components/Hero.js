@@ -10,9 +10,7 @@ const Hero = () => {
 
     const [heroMovie, setHeroMovie] = useState('')
     const [backDrop, setBackDrop] = useState('')
-    const [movieID, setMovieID] = useState('')
     const upcomingURL = `https://api.themoviedb.org/3/movie/upcoming?api_key=21ac8eec01fc0e49780c1a2d65e30dc1&language=en-US&page=1`
-    const movieDetails = `https://api.themoviedb.org/3/movie/${movieID}?api_key=21ac8eec01fc0e49780c1a2d65e30dc1&language=en-US`
 
 
     useEffect(() => {
@@ -21,25 +19,17 @@ const Hero = () => {
 
                 let randomNumber = `${Math.floor(Math.random() * 20)}`;
 
-                setMovieID(res.data.results[randomNumber].id)
                 setHeroMovie(res.data.results[randomNumber])
                 setBackDrop(`https://image.tmdb.org/t/p/original/${res.data.results[randomNumber].backdrop_path}`)
             })
     }, [])
 
-    const [details, setDetails] = useState({})
-
-
-    useEffect(() => {
-        axios.get(movieDetails)
-            .then(res => {
-                setDetails(res.data);
-            })
-    }, [])
 
 
 
-    console.log(details);
+
+
+
 
 
     return (
