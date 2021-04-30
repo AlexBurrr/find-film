@@ -1,18 +1,31 @@
 .home-popular-container{
-    background-color: darkgray;
+    background-color: black;
     height: 70rem;
     padding: 5rem;
     display: flex;
+    flex-direction: column;
     overflow-x: scroll;
 }
 
+.home-card-container{
+    display: flex;
+    
+}
 
+.slider-title{
+    font-size: 2.5rem;
+}
 
 .popular-title{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 .popular-card{
     margin: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    &:hover{
+        transform: scale(1.02)
+    }
     
 }

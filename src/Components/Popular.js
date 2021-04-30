@@ -26,21 +26,20 @@ const Popular = () => {
 
     return (
         <div>
-            <Title />
+
 
             <div className='home-popular-container'>
-                <p>Trending Movies</p>
+                <p className='slider-title' >Trending Movies</p>
 
-                {popular.map((movie, index) => (
-                    <div key={index} className='popular-card'>
-                        < Card src={imageurl + movie.poster_path} title={movie.title} />
+                <div className="home-card-container">
+                    {popular.map((movie, index) => (
+                        <div key={index} className='popular-card'>
+                            < Card src={imageurl + movie.poster_path} title={movie.title} />
 
-                    </div>
-                ))}
+                        </div>
+                    ))}
 
-
-
-
+                </div>
             </div>
 
         </div>
