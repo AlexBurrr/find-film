@@ -3,10 +3,11 @@ import Card from './Card'
 import axios from 'axios'
 import '../scss/popular.scss'
 import Title from './Title'
+import { Link } from 'react-router-dom'
 
 
 const Popular = () => {
-
+    const [yes, setYes] = useState('')
     const [popular, setPopular] = useState([])
 
 
@@ -24,6 +25,8 @@ const Popular = () => {
     console.log(popular);
 
 
+
+
     return (
         <div>
 
@@ -31,10 +34,13 @@ const Popular = () => {
             <div className='home-popular-container'>
                 <p className='slider-title' >Trending Movies</p>
 
-                <div className="home-card-container">
+                <div className="home-card-container"  >
                     {popular.map((movie, index) => (
-                        <div key={index} className='popular-card'>
-                            < Card src={imageurl + movie.poster_path} title={movie.title} />
+
+                        <div key={index} className='popular-card' >
+                            <Link to='/details'>
+                                < Card src={imageurl + movie.poster_path} title={movie.title} onClick={console.log(movie.title)} />
+                            </Link>
 
                         </div>
                     ))}
