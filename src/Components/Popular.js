@@ -37,8 +37,8 @@ const Popular = () => {
                 <div className="home-card-container" >
                     {popular.map((movie, index) => (
 
-                        <div key={index} className='popular-card' onClick={() => console.log(movie.title)}>
-                            <Link to='/details:id'>
+                        <div key={index} className='popular-card' onClick={() => localStorage.setItem('id', `${movie.id}`)}>
+                            <Link to='/details'>
                                 < Card src={imageurl + movie.poster_path} title={movie.title} />
                             </Link>
 
