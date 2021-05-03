@@ -20,6 +20,7 @@ const MovieDetails = () => {
 
 
         <div>
+            details
             {movie}
         </div>
     )

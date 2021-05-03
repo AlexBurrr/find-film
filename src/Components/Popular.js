@@ -34,12 +34,12 @@ const Popular = () => {
             <div className='home-popular-container'>
                 <p className='slider-title' >Trending Movies</p>
 
-                <div className="home-card-container"  >
+                <div className="home-card-container" >
                     {popular.map((movie, index) => (
 
-                        <div key={index} className='popular-card' >
-                            <Link to='/details'>
-                                < Card src={imageurl + movie.poster_path} title={movie.title} onClick={console.log(movie.title)} />
+                        <div key={index} className='popular-card' onClick={() => console.log(movie.title)}>
+                            <Link to='/details:id'>
+                                < Card src={imageurl + movie.poster_path} title={movie.title} />
                             </Link>
 
                         </div>
@@ -48,7 +48,7 @@ const Popular = () => {
                 </div>
             </div>
 
-        </div>
+        </div >
 
     )
 }
