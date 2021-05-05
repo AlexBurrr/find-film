@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import axios from 'axios'
 import '../scss/popular.scss'
-import Title from './Title'
 import { Link } from 'react-router-dom'
 
 
 const Popular = () => {
-    const [yes, setYes] = useState('')
     const [popular, setPopular] = useState([])
 
 

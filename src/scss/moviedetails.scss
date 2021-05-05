@@ -1,0 +1,63 @@
+.details-container{
+    background-color: black;
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vw;
+    max-width: 150rem;
+
+}
+
+.fontSM{
+    font-size: 1.2rem
+}
+.content{
+    position: relative;
+    width: 100%;
+    background-color: red;
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3,1fr);
+
+    
+}
+
+.movie-poster{
+    position: relative;
+    left: 15%;
+    top: 5%;
+    height: 40rem;
+}
+.text-content{
+    position: relative;
+    width: 90%;
+    top: 5%;
+    left: -10rem;
+    height: 50rem;
+    background-color: black;
+    grid-column: 2/span 3;
+
+    
+    
+    .movietitle{
+        justify-content: left;
+        font-size: 2.5rem;
+    }
+    .movie-desc{
+        margin-top: 2rem;
+    }
+    .runtime{
+        margin-top: 2rem;
+    }
+    .genre{
+        display: flex;
+
+        .genre-div{
+            padding: 0 3px;
+        }
+     
+    }
+    
+
+}
