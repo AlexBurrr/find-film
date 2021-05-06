@@ -4,7 +4,7 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    height: 100vw;
+    height: 65vw;
     max-width: 150rem;
 
 }
@@ -15,7 +15,7 @@
 .content{
     position: relative;
     width: 100%;
-    background-color: red;
+    background-color: black;
     display: grid;
     height: 100%;
     grid-template-columns: repeat(3,1fr);
@@ -60,4 +60,10 @@
     }
     
 
+}
+
+.character{
+    position: relative;
+    text-align: center;
+    top: -40px;
 }
