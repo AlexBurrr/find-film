@@ -7,6 +7,7 @@ import Upcoming from './Pages/Upcoming'
 import Top from './Pages/Top'
 import New from './Pages/New'
 import Nav from './Components/Nav'
+import ActorDetails from './Pages/ActorDetails'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/upcoming' component={Upcoming} />
           <Route path='/top' component={Top} />
           <Route path='/new' component={New} />
+          <Route path='/actor' component={ActorDetails} />
 
 
         </Switch>

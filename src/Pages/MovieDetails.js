@@ -60,8 +60,8 @@ const MovieDetails = () => {
                         <div className="home-card-container" >
                             {cast.map((cast, index) => (
 
-                                <div key={index} className='popular-card' onClick={() => localStorage.setItem('id', `${cast.id}`)}>
-                                    <Link to='/'>
+                                <div key={index} className='popular-card' onClick={() => localStorage.setItem('actor id', `${cast.id}`)}>
+                                    <Link to='/actor'>
                                         < Card src={castImg + cast.profile_path} title={cast.name} alt={'no picture'} />
                                         <div className="character"> as {cast.character}</div>
                                     </Link>
