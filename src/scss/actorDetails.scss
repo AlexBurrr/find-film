@@ -1,0 +1,60 @@
+.actorContainer{
+    background-color: black;
+    height: 70vw;
+    width: 100%;
+}
+.actor{
+    display: flex;
+    position: absolute;
+    // justify-content: space-between;
+    width: 80%;
+    height: 75%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+    .actor-image-container{
+        position: relative;
+        left: 5%;
+        top: 10%;
+        width: 25%;
+        height: 80%;
+        .actor-image{
+            width: 100%;
+            height: 100%;
+        }
+    }   
+
+
+.actor-details{
+    position: relative;
+    width: 50%;
+    top: 10%;
+    left: 10%;
+    justify-content: start;
+
+    .actor-name{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .actor-bio{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin-bottom: 2rem;
+    }
+.actor-birthday{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.actor-pob{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+
+}
+
+
+}
